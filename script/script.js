@@ -5,7 +5,9 @@ const bmiCalculator = () => {
 
 	const total = weight / Math.pow(height, 2);
 
-	document.getElementById('bmi').innerHTML = Math.round(total);
-
-	console.log(total);
+	if (weight === '' || height === '') {
+		alert('Define the correct value to weight and height!');
+	} else {
+		document.getElementById('bmi').innerHTML = Math.round(total);
+	}
 };
